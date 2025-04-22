@@ -35,7 +35,7 @@ export default function RootLayout({  //리액트와 달리 파일명과 이름(
               < Nav />
             </div>
           </header>
-          <main className="flex-grow">
+          <main className="flex-grow w-full mx-10/12 flex flex-col justify-start items-center">
             {children}
 
           </main>

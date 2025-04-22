@@ -8,7 +8,7 @@ function MyClockTime() {
     const [currentTime, setCurrentTime] = useState< Date >(new Date());
 
     useEffect(()=>{
-        let tm = setInterval(()=>{
+        const tm = setInterval(()=>{
             setCurrentTime(new Date());
         }, 1000); //1초에 한번씩 실행
 

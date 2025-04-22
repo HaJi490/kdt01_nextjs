@@ -61,7 +61,7 @@ export default function Subway() {
     const itemKeys:string[] = Object.keys(scode as Scode); // ❗json 마이그레이션3
     const scodeT = scode as Scode;//❗json 마이그레이션4
 
-    let tm = itemKeys.map((item:string)=><div key={item} className='w-full flex flex-col items-center text-sm border-y-2 border-y-gray-500'>
+    const tm = itemKeys.map((item:string)=><div key={item} className='w-full flex flex-col items-center text-sm border-y-2 border-y-gray-500'>
                                   <div className='w-full h-10 border-b-2 border-b-gray-200 border-r-1 border-r-gray-200  text-gray-700 flex justify-center items-center'>
                                     {/* ❗json 마이그레이션5 */}
                                     <div>{scodeT[item]["name"]}</div> 
@@ -76,7 +76,7 @@ export default function Subway() {
   },[tdata])
 
   //항목 가져오기
-  let opt = (sarea as Sarea[]).map((item:Sarea) => <option key={item["코드"]} value={item['코드']}>{item['측정소']}</option>) //❗json 마이그레이션2: 태그들은 노드의 배열
+  const opt = (sarea as Sarea[]).map((item:Sarea) => <option key={item["코드"]} value={item['코드']}>{item['측정소']}</option>) //❗json 마이그레이션2: 태그들은 노드의 배열
   //console.log(opt);
 
   //Click이벤트
@@ -92,7 +92,7 @@ export default function Subway() {
         <TailSelect id = 'sel1'
                     refSel={refSel}
                     ops = {opt} // opt가 노드의 배열이니까 ops는 ReactNode[]----------------------------------!
-                    handleChange = {handleChange} />
+                    handleChange = {handleChange}/>
       </div>
       <div className='mx-3 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-9 gap-y-1.5'>
         {tags}
