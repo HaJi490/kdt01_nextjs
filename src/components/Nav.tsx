@@ -31,6 +31,7 @@ export default function Nav() {
         <Link href='/subway' className='mr-5 px-3 py-2 rounded-md hover:bg-gray-200 text-gray-600'>Subway</Link> 
         <Link href='/productlist' className='mr-5 px-3 py-2 rounded-md hover:bg-gray-200 text-gray-600'>Product</Link> 
         <Link href='/productlist2' className='mr-5 px-3 py-2 rounded-md hover:bg-gray-200 text-gray-600'>Product2</Link> 
+        <Link href='/productlist3' className='mr-5 px-3 py-2 rounded-md hover:bg-gray-200 text-gray-600'>Product3</Link> 
       </div>
         {/* { localStorage.getItem('id') != '' 
         ? <div className='flex flex-row'>

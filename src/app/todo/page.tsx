@@ -4,10 +4,11 @@ import TodoItem from "./TodoItem"
 
 import { useEffect, useState } from "react"
 import axios from "axios"
+//import 
 
 import { Todo, CompletedT } from "@/types/Todo"
 
-const baseUrl = "http://localhost:3005/todos"
+const baseUrl = "http://localhost:3000/api/todo"
 
 export default function TodoList() {
     //state 변수 //❗state타입 정의: 제너릭으로 해야함
